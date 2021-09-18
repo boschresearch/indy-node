@@ -1,5 +1,5 @@
 from common.serializers.serialization import domain_state_serializer
-from indy_common.constants import GET_NYM, TIMESTAMP, VALUE
+from indy_common.constants import GET_NYM, TIMESTAMP
 from indy_node.server.request_handlers.domain_req_handlers.nym_handler import NymHandler
 from indy_node.server.request_handlers.utils import StateValue
 from plenum.common.constants import (
@@ -14,7 +14,6 @@ from plenum.server.database_manager import DatabaseManager
 from plenum.server.request_handlers.handler_interfaces.read_request_handler import (
     ReadRequestHandler,
 )
-from plenum.server.request_handlers.utils import decode_state_value
 
 
 class GetNymHandler(ReadRequestHandler):
