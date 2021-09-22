@@ -81,10 +81,13 @@ docs/source/api_docs/
 *.iml
 
 #vscode
-.vscode
+.vscode/
 
 # Vagrant files
 .vagrant
 
 # test output from working with GitHub actions
 test-result-node.xml
+
+# Devcontainer
+.devcontainer/
