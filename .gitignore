@@ -43,6 +43,7 @@ cli_output.log
 nosetests.xml
 coverage.xml
 tails/
+.pytest_cache/
 
 # Translations
 *.mo
