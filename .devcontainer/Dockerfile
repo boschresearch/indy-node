@@ -6,9 +6,10 @@
 
 FROM hyperledger/indy-core-baseci:0.0.3-master
 
-# Install environment
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 \
-    && apt-get update -y && apt-get upgrade -y && apt-get install -y \
+# Install environment - Disable https verification of apt repos
+RUN echo "Acquire::https::Verify-Peer \"false\";" >> /etc/apt/apt.conf.d/80ssl-exceptions && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 && \
+    apt-get update -y && apt-get upgrade -y && apt-get install -y \
     git \
     wget \
     python3-nacl \
